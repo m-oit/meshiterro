@@ -5,6 +5,14 @@ class ApplicationController < ActionController::Base
   #configure_permitted_parametersメソッドが実行される)
   #このメソッドはdvise_parameter_sanitizer.permitを使うことでサインアップの際にユーザー名のデータ操作を許可している
   
+  def after_sign_in_path_for(resource)
+    about_path
+  end
+  
+  def after_sign_out_path_for(resource)
+    about_path
+  end
+  
   protected
   
   def configure_permitted_parameters
