@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   #このメソッドはdvise_parameter_sanitizer.permitを使うことでサインアップの際にユーザー名のデータ操作を許可している
   
   def after_sign_in_path_for(resource)
-    about_path
+    post_images_path
   end
   
   def after_sign_out_path_for(resource)
